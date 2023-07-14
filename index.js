@@ -52,27 +52,33 @@ const pizzas = [
 
 // ejercico 1
 
-const impares = pizzas.filter((pizza) => 
-pizza.id %2!== 0
-)
-console.log(impares);
-  
+const impares = pizzas.filter((pizza) =>
+pizza.id %2!== 0); 
+console.log("estos son los id impares: ", impares)
+
+
+
 //ejercicio 2
 
-const menosDe600 = pizzas.filter((pizza) => 
-pizza.precio < 600)
-console.log(menosDe600);
+const menosDe600 = pizzas.filter((pizza) =>
+  pizza.precio < 600);
+
+console.log(`estas son las pizzas que cuestan menos de 600: `, menosDe600);
+
  
 
 //ejercicio 3
 
-const nombreYprecio = pizzas.forEach((nombre, precio) =>
-console.log(nombre, precio) );
+const nombresYprecios = pizzas.forEach(pizza =>
+  console.log(pizza.nombre, "precio $", pizza.precio));
+
+
+ 
 
 //ejercicio 4
 
-const ingredientes = pizzas.forEach((pizza) =>{
-  console.log('la ' + pizza.nombre + " tiene.")
+ const ingredientes = pizzas.forEach((pizza) =>{
+  console.log('la ' + pizza.nombre + " tiene: ")
   pizza.ingredientes.forEach((ingredientes) => {
     console.log(ingredientes);
   })
